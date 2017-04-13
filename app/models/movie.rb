@@ -1,3 +1,3 @@
 class Movie < ActiveRecord::Base
-  # Remember to create a migration!
+  has_many :users, through: :user_movies
 end
