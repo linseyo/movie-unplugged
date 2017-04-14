@@ -5,9 +5,9 @@ post '/movies' do
   query = params[:search_query]
   movie = Movie.new
   @result = movie.get_movie("#{query}")
-  # @result.each do |movie_title|
-  #   Movie.find_or_create_by(title: movie_title)
-  # end
+  @result.each do |movie|
+    Movie.find_or_create_by(title: movie.title, year: movie.year, poster: movie.poster)
+  end
   p @result
   erb :'movies/_display', layout: false
 end
