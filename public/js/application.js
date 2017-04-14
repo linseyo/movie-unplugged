@@ -12,21 +12,19 @@ $(document).ready(function() {
     });
   });
 
-  // $('#show-new-search').on("click", function(event){
-  //   event.preventDefault();
-
-  //   $.ajax({
-  //     url: '/movies'
-  //     method: 'GET'
-  //   })
-  // })
-
-
-
-
-
-
-
-
-
+  $('#show-new-search').on("click", 'button', function(event){
+    event.preventDefault();
+    var searchQuery = $(event.delegateTarget).find('#searchMovie').serialize();
+    $.ajax({
+      url: '/movies',
+      method: 'POST',
+      data: searchQuery
+    }).done(function(response){
+      console.log(response);
+      $('#show-new-search').hide();
+      $('#display-search-results').hide();
+      $('#display-search-results').append(response);
+      $('#display-search-results').slideDown();
+    })
+  })
 });
