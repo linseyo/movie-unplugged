@@ -4,16 +4,18 @@ require 'HTTParty'
 class Movie
 
   def initialize
-    @results = []
+    @all_movies = []
   end
 
   def get_movie(query)
     response = OMDB.search(query)
   # HTTParty.get("http://www.omdbapi.com/?t=#{query}")
     response.each do |movie|
-      @results << movie[:title]
+      if movie[:type] == "movie"
+        @all_movies << movie
+      end
     end
-    @results
+    @all_movies
   end
 
 end

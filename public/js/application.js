@@ -14,6 +14,7 @@ $(document).ready(function() {
 
   $('#show-new-search').on("click", 'button', function(event){
     event.preventDefault();
+    $('#display-search-results').html('')
     var searchQuery = $(event.delegateTarget).find('#searchMovie').serialize();
     $.ajax({
       url: '/movies',
@@ -25,6 +26,9 @@ $(document).ready(function() {
       $('#display-search-results').hide();
       $('#display-search-results').append(response);
       $('#display-search-results').slideDown();
-    })
-  })
+      $('#get-new-movie-form').fadeIn();
+    });
+  });
+
+
 });

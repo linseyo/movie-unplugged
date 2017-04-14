@@ -38,21 +38,22 @@ button {
 }
 
 /* unvisited link */
-nav a:link {
-    color: #d89f9f;
+a:link {
+  color: #d89f9f;
+  text-decoration: none;
 }
 
 /* visited link */
-nav a:visited {
-    color: #dbf2ea;
+a:visited {
+  color: #dbf2ea;
 }
 
 /* mouse over link */
-nav a:hover {
-    color: #ffece4;
+a:hover {
+  color: #ffece4;
 }
 
 /* selected link */
-nav a:active {
-    color: #926f58;
+a:active {
+  color: #926f58;
 }

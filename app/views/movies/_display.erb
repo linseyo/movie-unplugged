@@ -1,5 +1,7 @@
 <ul id="display-results">
   <% @result.each do |movie| %>
-  <li><%= movie %> </li>
+  <li>
+    <a href='/movie/:id'> <%= movie[:title] %> </a>
+  </li>
   <% end %>
 </ul>
