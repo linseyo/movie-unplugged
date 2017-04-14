@@ -13,4 +13,5 @@ get '/movies/new' do
   erb :'movies/_new', layout: false
 end
 
-get '/movies/:id'
+get '/movies/:id' do
+end

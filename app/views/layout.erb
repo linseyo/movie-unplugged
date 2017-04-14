@@ -23,7 +23,6 @@
 </head>
 <body>
   <div class="container">
-  <h1>Movie Unplugged</h1>
   <nav>
     <a href='/'>GO HOME</a>
       <% if session[:user_id] %>
@@ -37,6 +36,7 @@
       <a href="users/new">REGISTER</a>
       <% end %>
   </nav>
+  <h1>Movie Unplugged</h1>
   <%= yield %>
   </div>
 </body>

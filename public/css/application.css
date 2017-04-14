@@ -1,29 +1,58 @@
+html, p {
+  font-family: 'News Cycle', sans-serif;
+}
 .container {
   margin: 20px auto;
   width: 320px;
   padding: 0px 20px 20px 20px;
-  border: 2px solid #292929 ;
+  border: 2px solid #926f58 ;
   border-radius: 15px;
   box-shadow: 10px 10px 5px #926f58 ;
 }
 
+
 nav {
-  background-color: #ffece4;
   border-radius: 5px;
-  padding: 15px;
-  width: 100px;
-
-
   font-family: 'News Cycle', sans-serif;
+  width: 100%;
+  float: left;
+  margin: 0 0 3em 0;
+  padding: 5px;
+  list-style: none;
+  text-align: center;
 }
 
 h1 {
   color: #d89f9f;
   font-family: 'Great Vibes', cursive;
   font-size: 80px;
+  text-align: center;
 }
 
 
 button {
   border-radius: 5px;
+  color: #dbf2ea;
+  font-family: 'News Cycle', sans-serif;
+  background-color: #926f58;
+}
+
+/* unvisited link */
+nav a:link {
+    color: #d89f9f;
+}
+
+/* visited link */
+nav a:visited {
+    color: #dbf2ea;
+}
+
+/* mouse over link */
+nav a:hover {
+    color: #ffece4;
+}
+
+/* selected link */
+nav a:active {
+    color: #926f58;
 }
