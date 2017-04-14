@@ -1,7 +1,10 @@
 require 'bcrypt'
 
 class User < ActiveRecord::Base
+  include BCrypt
+
   has_many :movies, through: :user_movies
+
 
   def password
     @password ||= Password.new(password_hash)
