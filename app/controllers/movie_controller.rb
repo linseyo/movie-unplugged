@@ -8,3 +8,7 @@ get '/movies' do
   p @result.class
   p @result
 end
+
+get '/movies/new' do
+  erb :'movies/_new', layout: false
+end

@@ -22,3 +22,8 @@ h1 {
   font-family: 'Great Vibes', cursive;
   font-size: 80px;
 }
+
+
+button {
+  border-radius: 5px;
+}
