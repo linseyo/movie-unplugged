@@ -24,7 +24,6 @@
 <body>
   <div class="container">
   <nav>
-    <a href='/'>GO HOME</a>
       <% if session[:user_id] %>
         <% @user = User.find(session[:user_id])%>
         <a href="/users/<%= session[:user_id] %> ">
@@ -36,8 +35,10 @@
       <a href="users/new">REGISTER</a>
       <% end %>
   </nav>
-  <h1>Movie Unplugged</h1>
-  <%= yield %>
+  <div class="home-link">
+    <h1>Movie Unplugged</h1>
   </div>
+  <%= yield %>
+</div>
 </body>
 </html>

@@ -30,5 +30,8 @@ $(document).ready(function() {
     });
   });
 
+  $('.home-link').on("click", function(event) {
+    window.location.href="/";
+  });
 
 });

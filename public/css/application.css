@@ -2,9 +2,14 @@ html, p {
   font-family: 'News Cycle', sans-serif;
   list-style: none;
 }
+
 .container {
+  overflow: scroll;
   margin: 20px auto;
+  margin-top: 150px;
   width: 560px;
+  height: 90%;
+  display: block;
   padding: 0px 20px 20px 20px;
   border: 2px solid #926f58 ;
   border-radius: 15px;
@@ -12,6 +17,23 @@ html, p {
   text-align: center;
 }
 
+.container::-webkit-scrollbar-track
+{
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.container::-webkit-scrollbar
+{
+  width: 6px;
+  background-color: transparent;
+}
+
+.container::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  background-color: transparent;
+}
 
 nav {
   border-radius: 5px;
