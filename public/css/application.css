@@ -1,13 +1,15 @@
 html, p {
   font-family: 'News Cycle', sans-serif;
+  list-style: none;
 }
 .container {
   margin: 20px auto;
-  width: 320px;
+  width: 560px;
   padding: 0px 20px 20px 20px;
   border: 2px solid #926f58 ;
   border-radius: 15px;
   box-shadow: 10px 10px 5px #926f58 ;
+  text-align: center;
 }
 
 
@@ -56,4 +58,8 @@ a:hover {
 /* selected link */
 a:active {
   color: #926f58;
+}
+
+li {
+  list-style: none;
 }
