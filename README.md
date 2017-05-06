@@ -6,9 +6,9 @@ Or perhaps you're just really bored and can't pick a movie to watch! That is whe
 Web application meant to share movie suggestions and help users maintain tabs on movies they've wanted to watch or just curious about.
 
 ### Technologies Used
--Ruby + Sinatra
--Javascript - jQuery
--CSS & HTML
+- Ruby + Sinatra
+- Javascript - jQuery
+- CSS & HTML
 
 ### Contributing
 Movie Unplugged uses The Movie Database API
