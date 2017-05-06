@@ -1,14 +1,10 @@
-<p>Welcome to your favorite movie tracking web app~</p>
-
-<form>
-  <label>Search for a Movie:</label>
-  <input type="text" placeholder="Keyword" name="search_query">
-  <button type="submit">Submit</button>
-</form>
-
-<HR>
-<div>
-<% @result.each do |movie|%>
-  <li><%= movie %></li>
-<% end %>
+<div class="main-content">
+  <p>Welcome to your favorite movie tracking web app~</p>
+  <div id="get-new-movie-form">
+    <button type="submit">Find A Movie</button>
+  </div>
+  <div id="show-new-search"></div>
+    <HR>
+  <div id="display-search-results"></div>
+  <div id="display-movie-results"></div>
 </div>

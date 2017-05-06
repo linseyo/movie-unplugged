@@ -1,32 +1,25 @@
 require 'omdbapi'
 require 'HTTParty'
 
-class Movie
+class GetMovie
 
   def initialize
-    @results = []
+    @all_movies = []
   end
 
-  # def parse_data(query)
-  #   @result = get_movie(query)
-  # end
-
-
   def get_movie(query)
-    response = OMDB.search(query)
+    results = OMDB.search(query)
   # HTTParty.get("http://www.omdbapi.com/?t=#{query}")
-    response.each do |movie|
-      @results << movie[:title]
+    results.each do |movie|
+      if movie[:type] == "movie"
+        @all_movies << movie
+      end
     end
-    @results
-   #   p pr
- #  #   p "=========================="
- #  # end
- #  p @response
- #  p "=========================="
- # p @response[0]
- # p "=========================="
- # p @response['Title']
+    @all_movies
+  end
+
+  def movie_plot(movie_title)
+    plot = OMDB.title(movie_title, plot: 'full')
   end
 
 end
