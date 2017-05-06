@@ -27,5 +27,5 @@ get '/movies/:id' do
   searched_movie = Movie.find(params[:id])
   movie_title = searched_movie.title
   @movie = movie.movie_plot(movie_title)
-  erb :'movies/show'
+  erb :'movies/show', :layout => false 
 end

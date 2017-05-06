@@ -7,8 +7,10 @@ html, p {
   overflow: scroll;
   margin: 20px auto;
   margin-top: 150px;
-  width: 560px;
+  width: 70%;
   height: 90%;
+  max-height: 90%;
+  max-width: 70%;
   display: block;
   padding: 0px 20px 20px 20px;
   border: 2px solid #926f58 ;

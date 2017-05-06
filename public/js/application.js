@@ -36,8 +36,16 @@ $(document).ready(function() {
   $('#display-search-results').on("click", 'a', function(event) {
     event.preventDefault();
     var pathName = event.target.pathname
-    console.log(pathName)
-    debugger
-  })
+    // var movieId =
+    $.ajax({
+      url: pathName,
+      method: 'GET'
+    }).done(function(response) {
+      $('#display-search-results').hide();
+      $('#display-movie-results').hide();
+      $('#display-movie-results').append(response);
+      $('#display-movie-results').slideDown();
+    });
+  });
 
 });
