@@ -9,6 +9,8 @@ $(document).ready(function() {
       $('#show-new-search').hide();
       $('#show-new-search').html(response);
       $('#show-new-search').slideDown();
+      $('#display-search-results').html('')
+      $('#display-movie-results').html('');
     });
   });
 
@@ -35,6 +37,8 @@ $(document).ready(function() {
 
   $('#display-search-results').on("click", 'a', function(event) {
     event.preventDefault();
+    $('#display-search-results').html('')
+    $('#display-movie-results').html('');
     var pathName = event.target.pathname
     // var movieId =
     $.ajax({
