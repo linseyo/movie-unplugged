@@ -7,7 +7,7 @@ Web application was created as a solo passion project idea during Dev Bootcamp P
 
 ### Technologies Used
 - Ruby + Sinatra
-- Javascript - jQuery
+- Javascript, jQuery, AJAX
 - CSS & HTML
 - OMDB API
 
